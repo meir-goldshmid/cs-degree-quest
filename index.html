@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CS Degree Quest</title>
+  <meta name="description" content="The CS degree you never took — logic, math, Big-O, data structures, algorithms, graphs, calculus and more. Bite-sized, fun, mobile-first.">
+  <meta name="theme-color" content="#0f1020">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CS Quest">
+  <meta property="og:title" content="CS Degree Quest">
+  <meta property="og:description" content="The CS degree you never took — in 5-minute lessons.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // apply theme before paint
+    try { var t = JSON.parse(localStorage.getItem('cq.v1') || '{}').theme || 'auto';
+      if (t === 'auto') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <div class="toast-wrap" id="toasts"></div>
+  <canvas id="confetti"></canvas>
+
+  <script src="js/registry.js"></script>
+  <!-- curriculum (one file per unit) -->
+  <script src="js/content/logic.js"></script>
+  <script src="js/content/numbers.js"></script>
+  <script src="js/content/sets-proofs.js"></script>
+  <script src="js/content/exp-log.js"></script>
+  <script src="js/content/big-o.js"></script>
+  <script src="js/content/counting-probability.js"></script>
+  <script src="js/content/data-structures.js"></script>
+  <script src="js/content/sorting-searching.js"></script>
+  <script src="js/content/recursion-dp.js"></script>
+  <script src="js/content/graphs.js"></script>
+  <script src="js/content/trig-calculus.js"></script>
+  <script src="js/content/linear-algebra.js"></script>
+  <script src="js/content/theory.js"></script>
+  <!-- engine -->
+  <script src="js/widgets.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
